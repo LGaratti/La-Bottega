@@ -271,6 +271,15 @@ input, select, textarea {
 		margin: 3rem 0;
 	}
 
+	hr.sailor_rope_blue {
+		border: 0;
+		height: 15px;
+		padding: auto;
+		background-repeat: repeat-x;
+		background-size: 320px 12px;
+		background-image: url(../../images/elements/sailor_rope_blue.jpg);
+	}	
+
 		hr.major {
 			margin: 5rem 0;
 		}
@@ -3237,7 +3246,7 @@ input, select, textarea {
 			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/fotosfondi/sfondo1.jpg");
 			background-size: auto,								auto,														100% auto;
 			background-position: center,								center,														top center;
-			background-repeat: repeat,								no-repeat,													no-repeat;
+			filter: blur(10px);
 			background-attachment: scroll,								scroll,														scroll;
 			z-index: -1;
 		}
@@ -3310,7 +3319,7 @@ input, select, textarea {
 		cursor: default;
 		text-align: center;
 		z-index: 1;
-		min-height: 100vh;
+		min-height: 80vh;
 	}
 
 		#intro input, #intro select, #intro textarea {
@@ -3343,8 +3352,8 @@ input, select, textarea {
 			background: rgba(255, 255, 255, 0.075);
 			border-color: #ffffff;
 		}
-
-		#intro hr {
+		/* TODO forse modificare questo hr */
+		#intro hr { 
 			border-bottom-color: #ffffff;
 		}
 
@@ -3450,10 +3459,10 @@ input, select, textarea {
 			}
 
 		@media screen and (max-width: 980px) {
-
+/* TODO */
 			#intro {
 				padding: 4rem 4rem 2rem 4rem ;
-				min-height: 90vh;
+				min-height: 60vh; 
 			}
 
 				#intro p br {
@@ -3470,7 +3479,7 @@ input, select, textarea {
 
 			#intro {
 				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 80vh;
+				min-height: 40vh;
 			}
 
 				#intro h1 {
@@ -3564,7 +3573,7 @@ input, select, textarea {
 			transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
 			pointer-events: auto;
 			border-style: solid;
-			border-color: #ffffff;
+			border-color: #28285C;
 			border-width: 5px !important;
 			font-family: "Source Sans Pro", Helvetica, sans-serif;
 			font-size: 2.25rem;
@@ -3648,7 +3657,7 @@ input, select, textarea {
 		}
 
 		#nav a {
-			color: #ffffff;
+			color: #1e252d;
 			border-bottom-color: rgba(255, 255, 255, 0.5);
 		}
 
@@ -3764,11 +3773,20 @@ input, select, textarea {
 		z-index: 2;
 	}
 
-		#main > * {
-			padding: 4rem 4rem 2rem 4rem ;
-			border-top: solid 2px #eeeeee;
-			margin: 0;
-		}
+	#main > * {
+		padding: 4rem 4rem 2rem 4rem;
+		border-top: none;
+		margin: 0;
+	  }
+	  
+	  /* #main > *:before {
+		content: "";
+		display: block;
+		height: 35px;
+		background-repeat: repeat-x;
+		background-size: 320px 12px;
+		background-image: url(../../images/elements/sailor_rope_blue.jpg);
+	  } */
 
 			#main > *:first-child {
 				border-top: 0;
@@ -4382,6 +4400,46 @@ input, select, textarea {
 
 		}
 
+	/* .google-map {
+		position: relative;
+		padding-bottom: 75%;
+		height: 0;
+		overflow: hidden;
+		min-height: 200px;
+	}
+	
+	.google-map iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
+	}
+	
+	.address {
+		padding: 2rem 2rem 2rem 2rem
+	}
+	
+	.google-map {
+		flex: 5 1 auto;
+		padding: 20px;
+	}
+	
+	.flex-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	@media screen and (max-width: 980px) {
+		.flex-container {
+			flex-direction: column;
+		}
+		.google-map, .address {
+			flex: none;
+			width: 100%;
+		}
+	} */
+		
 	#copyright {
 		color: #ffffff;
 		position: relative;
