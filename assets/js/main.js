@@ -241,6 +241,60 @@
 				});									
 			
 			});
+			// Hide intro on scroll (> medium).               // TODO verificare se è questo quello che fa casino con il trigger ad inizio pagina in modalità tablet
+				breakpoints.on('>medium', function() {
+
+					$main.unscrollex();
+				
+					$main.scrollex({
+						mode: 'bottom',
+						top: '25vh',
+						bottom: '10vh',  // modificato da '-15vh' a '10vh'
+						enter: function() {
+							$intro.addClass('hidden');
+						},
+						leave: function() {
+							$intro.removeClass('hidden');
+						}
+					});								
+				
+				});
+
+			// Hide intro on scroll (<= medium).	  
+				breakpoints.on('<=medium', function() {
+					$main.unscrollex();
+					
+					$main.scrollex({
+						mode: 'bottom',
+						top: '50vh',
+						bottom: '-30vh',
+						enter: function() {
+							$intro.addClass('hidden');
+						},
+						leave: function() {
+							$intro.removeClass('hidden');
+						}
+					});
+				}); 
+
+			// Hide intro on scroll (<= small).
+				breakpoints.on('<=small', function() {
+
+					$main.unscrollex();
+
+					$main.scrollex({
+						mode: 'middle',
+						top: '15vh',
+						bottom: '-15vh',
+						enter: function() {
+							$intro.addClass('hidden');
+						},
+						leave: function() {
+							$intro.removeClass('hidden');
+						}
+					});
+				});
+>>>>>>> 659e589a585882b4452d0d21878e5b60f1ba03f0
 
 			breakpoints.on('<=xlarge', function() {  // xlarge:    ['1281px',   '1680px'   ],
 
