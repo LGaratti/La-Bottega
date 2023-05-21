@@ -272,9 +272,10 @@ input, select, textarea {
 	}
 
 	hr.sailor_rope_blue {
+		margin: 0;
 		border: 0;
 		height: 15px;
-		padding: auto;
+		padding: 0;
 		background-repeat: repeat-x;
 		background-size: 320px 12px;
 		background-image: url(../../images/elements/sailor_rope_blue.jpg);
@@ -2684,6 +2685,11 @@ input, select, textarea {
 			-ms-transform: scale(1.05);
 			transform: scale(1.05);
 		}
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
 
 /* Actions */
 
@@ -3830,14 +3836,9 @@ input, select, textarea {
 		margin: 0;
 	  }
 	  
-	  /* #main > *:before {
-		content: "";
-		display: block;
-		height: 35px;
-		background-repeat: repeat-x;
-		background-size: 320px 12px;
-		background-image: url(../../images/elements/sailor_rope_blue.jpg);
-	  } */
+	#main > .sailor_rope_blue {
+		padding: 0;
+	}
 
 			#main > *:first-child {
 				border-top: 0;
@@ -3850,6 +3851,11 @@ input, select, textarea {
 		#main > .post {
 			padding: 8rem 8rem 6rem 8rem ;
 		}
+
+		#main > .post.clearfix {
+			padding: 4rem 4rem 3rem 4rem;
+		}
+		
 
 			#main > .post header.major > .date {
 				margin-top: -2rem;
