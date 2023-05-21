@@ -294,7 +294,6 @@
 						}
 					});
 				});
->>>>>>> 659e589a585882b4452d0d21878e5b60f1ba03f0
 
 			breakpoints.on('<=xlarge', function() {  // xlarge:    ['1281px',   '1680px'   ],
 
