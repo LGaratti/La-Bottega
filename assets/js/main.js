@@ -215,59 +215,141 @@
 					}).trigger('resize.ie-intro-fix');
 				}
 
+				// default:   ['1681px',   null       ],
+				// xlarge:    ['1281px',   '1680px'   ],
+				// large:     ['981px',    '1280px'   ],
+				// medium:    ['737px',    '980px'    ],
+				// small:     ['481px',    '736px'    ],
+				// xsmall:    ['361px',    '480px'    ],
+				// xxsmall:   [null,       '360px'    ]
+
 			// Hide intro on scroll (> medium).               // TODO verificare se è questo quello che fa casino con il trigger ad inizio pagina in modalità tablet
-				breakpoints.on('>medium', function() {
+			breakpoints.on('>xlarge', function() { // default:   ['1681px',   null       ],
 
-					$main.unscrollex();
+				$main.unscrollex();
 				
-					$main.scrollex({
-						mode: 'bottom',
-						top: '25vh',
-						bottom: '10vh',  // modificato da '-15vh' a '10vh'
-						enter: function() {
-							$intro.addClass('hidden');
-						},
-						leave: function() {
-							$intro.removeClass('hidden');
-						}
-					});								
+				$main.scrollex({
+					mode: 'bottom',
+					top: '25vh', //distanza dal bordo superiore dell'elemento $main. innesca l'evento enter.
+					bottom: '10vh',  // distanza dal bordo inferiore dell'elemento $main alla parte inferiore della viewport.  innesca l'evento enter. 
+					enter: function() {
+						$intro.addClass('hidden');
+					},
+					leave: function() {
+						$intro.removeClass('hidden');
+					}
+				});									
+			
+			});
+
+			breakpoints.on('<=xlarge', function() {  // xlarge:    ['1281px',   '1680px'   ],
+
+				$main.unscrollex();
+			
+				$main.scrollex({
+					mode: 'bottom',
+					top: '50vh', //distanza dal bordo superiore dell'elemento $main. innesca l'evento enter.
+					bottom: '10vh',  // distanza dal bordo inferiore dell'elemento $main alla parte inferiore della viewport.  innesca l'evento enter. 
+					enter: function() {
+						$intro.addClass('hidden');
+					},
+					leave: function() {
+						$intro.removeClass('hidden');
+					}
+				});								
+			
+			});
+
+			breakpoints.on('<=large', function() {  // large:     ['981px',    '1280px'   ],
+
+				$main.unscrollex();
+			
+				$main.scrollex({
+					mode: 'bottom',
+					top: '70vh', //distanza dal bordo superiore dell'elemento $main. innesca l'evento enter.
+					bottom: '10vh',  // distanza dal bordo inferiore dell'elemento $main alla parte inferiore della viewport.  innesca l'evento enter. 
+					enter: function() {
+						$intro.addClass('hidden');
+					},
+					leave: function() {
+						$intro.removeClass('hidden');
+					}
+				});								
+			
+			});
+
+// 			// Hide intro on scroll (> medium).               // TODO verificare se è questo quello che fa casino con il trigger ad inizio pagina in modalità tablet
+// 				breakpoints.on('>medium', function() {// medium:    ['737px',    '980px'    ],
+// 
+// 					$main.unscrollex();
+// 				
+// 					$main.scrollex({
+// 						mode: 'bottom',
+// 						top: '25vh', //distanza dal bordo superiore dell'elemento $main. innesca l'evento enter.
+// 						bottom: '10vh',  // distanza dal bordo inferiore dell'elemento $main alla parte inferiore della viewport.  innesca l'evento enter. 
+// 						enter: function() {
+// 							$intro.addClass('hidden');
+// 						},
+// 						leave: function() {
+// 							$intro.removeClass('hidden');
+// 						}
+// 					});								
+// 				
+// 				});
+
+		// Hide intro on scroll (<= medium).	  
+			breakpoints.on('<=medium', function() {// medium:    ['737px',    '980px'    ],
+
+				$main.unscrollex();
 				
+				$main.scrollex({
+					mode: 'bottom',
+					top: '70vh',
+					bottom: '40vh',
+					enter: function() {
+						$intro.addClass('hidden');
+					},
+					leave: function() {
+						$intro.removeClass('hidden');
+					}
 				});
+			}); 
 
-			// Hide intro on scroll (<= medium).	  
-				breakpoints.on('<=medium', function() {
-					$main.unscrollex();
-					
-					$main.scrollex({
-						mode: 'bottom',
-						top: '50vh',
-						bottom: '-30vh',
-						enter: function() {
-							$intro.addClass('hidden');
-						},
-						leave: function() {
-							$intro.removeClass('hidden');
-						}
-					});
-				}); 
+		// Hide intro on scroll (<= small).
+			breakpoints.on('<=small', function() { // small:     ['481px',    '736px'    ],
 
-			// Hide intro on scroll (<= small).
-				breakpoints.on('<=small', function() {
+				$main.unscrollex();
 
-					$main.unscrollex();
-
-					$main.scrollex({
-						mode: 'middle',
-						top: '15vh',
-						bottom: '-15vh',
-						enter: function() {
-							$intro.addClass('hidden');
-						},
-						leave: function() {
-							$intro.removeClass('hidden');
-						}
-					});
+				$main.scrollex({
+					mode: 'middle',
+					top: '20vh',
+					bottom: '40vh',
+					enter: function() {
+						$intro.addClass('hidden');
+					},
+					leave: function() {
+						$intro.removeClass('hidden');
+					}
 				});
+			});
+
+// 			// Hide intro on scroll (<= small).
+// 			breakpoints.on('<=small', function() { // small:     ['481px',    '736px'    ],
+// 
+// 				$main.unscrollex();
+// 
+// 				$main.scrollex({
+// 					mode: 'middle',
+// 					top: '15vh',
+// 					bottom: '-15vh',
+// 					enter: function() {
+// 						$intro.addClass('hidden');
+// 					},
+// 					leave: function() {
+// 						$intro.removeClass('hidden');
+// 					}
+// 				});
+// 			});
 
 		}
 

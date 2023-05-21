@@ -118,8 +118,8 @@ input, select, textarea {
 	html {
 		font-size: 16pt;
 	}
-
-		@media screen and (max-width: 1680px) {
+		/* TODO da supervisionare per pagina troppo grossa, ma fatti il segno della croce */
+		@media screen and (max-width: 1680px) { 
 
 			html {
 				font-size: 12pt;
@@ -3243,7 +3243,7 @@ input, select, textarea {
 			width: 100%;
 			height: 100%;
 			background-color: #ffffff;
-			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/fotosfondi/sfondo1.jpg");
+			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/sfondo1.jpg"); /* TODO Dove prendere appunti per modifica scritta durante animazione */
 			background-size: auto,								auto,														100% auto;
 			background-position: center,								center,														top center;
 			filter: blur(10px);
@@ -3457,12 +3457,63 @@ input, select, textarea {
 				transform: translateY(4rem);
 				opacity: 0;
 			}
+		
+		/* @media screen and (max-width: 1920px) {
+			
+			#intro {
+				padding: 8rem 4rem 2rem 4rem ;
+				min-height: 50vh; 
+			}
 
-		@media screen and (max-width: 980px) {
-/* TODO */
+				#intro p br {
+					display: none;
+				}
+
+				#intro + #header {
+					margin-top: -14rem;
+				}
+			
+		} */
+
+		@media screen and (max-width: 1680px) {
+			
 			#intro {
 				padding: 4rem 4rem 2rem 4rem ;
-				min-height: 60vh; 
+				min-height: 50vh; 
+			}
+
+				#intro p br {
+					display: none;
+				}
+
+				#intro + #header {
+					margin-top: -14rem;
+				}
+			
+		}
+
+		@media screen and (max-width: 1280px) {     /* large:     ['981px',    '1280px'   ], */
+
+			#intro {
+				padding: 2rem 4rem 2rem 4rem ;
+				min-height: 40vh; 
+			}
+
+				#intro p br {
+					display: none;
+				}
+
+				#intro + #header {
+					margin-top: -14rem;
+				}
+			
+		}
+
+		/* TODO */ 
+		@media screen and (max-width: 980px) {
+			#intro {
+				padding: 4rem 4rem 2rem 4rem ;
+				min-height: 40vh; 
 			}
 
 				#intro p br {
@@ -3478,12 +3529,12 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#intro {
-				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 40vh;
+				padding: 3rem 2rem 3rem 2rem ;
+				min-height: 35vh;
 			}
 
 				#intro h1 {
-					font-size: 3.25rem;
+					font-size: 4.25rem;
 					line-height: 1.1;
 					margin-bottom: 1rem;
 				}
@@ -4554,7 +4605,7 @@ input, select, textarea {
 		top: 0.75rem;
 		right: 0.75rem;
 		border: 0;
-		color: #ffffff;
+		color: #212931;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 0.9rem;
 		font-weight: 900;
