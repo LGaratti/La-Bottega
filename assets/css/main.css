@@ -176,7 +176,7 @@ input, select, textarea {
 	}
 
 	p {
-		text-align: justify;
+		/* text-align: justify; */
 		margin: 0 0 2rem 0;
 	}
 
@@ -279,7 +279,7 @@ input, select, textarea {
 		background-repeat: repeat-x;
 		background-size: 320px 12px;
 		background-image: url(../../images/elements/sailor_rope_blue.jpg);
-	}	
+	}
 
 		hr.major {
 			margin: 5rem 0;
@@ -3834,8 +3834,8 @@ input, select, textarea {
 		padding: 4rem 4rem 2rem 4rem;
 		border-top: none;
 		margin: 0;
-	  }
-	  
+	}
+
 	#main > .sailor_rope_blue {
 		padding: 0;
 	}
@@ -3853,7 +3853,8 @@ input, select, textarea {
 		}
 
 		#main > .post.clearfix {
-			padding: 4rem 4rem 3rem 4rem;
+			/* padding: 4rem 4rem 3rem 4rem; */
+			padding: 3rem 2rem 3rem 2rem;
 		}
 		
 
