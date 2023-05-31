@@ -274,7 +274,7 @@ input, select, textarea {
 	hr.sailor_rope_blue {
 		margin: 0;
 		border: 0;
-		height: 15px;
+		height: 12px;
 		padding: 0;
 		background-repeat: repeat-x;
 		background-size: 320px 12px;
@@ -2685,6 +2685,7 @@ input, select, textarea {
 			-ms-transform: scale(1.05);
 			transform: scale(1.05);
 		}
+
 .clearfix::after {
 	content: "";
 	display: table;
