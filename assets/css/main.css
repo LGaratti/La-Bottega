@@ -2686,11 +2686,11 @@ input, select, textarea {
 			transform: scale(1.05);
 		}
 
-.clearfix::after {
-	content: "";
-	display: table;
-	clear: both;
-}
+	.clearfix::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 
 /* Actions */
 
