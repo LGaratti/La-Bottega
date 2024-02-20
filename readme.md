@@ -1,10 +1,10 @@
 # Bottega Restaurant Website
 
-This project is a custom adaptation of the "Massively" template by HTML5 UP, tailored specifically for the Bottega, a distinguished seafood restaurant. The original template, known for its text-heavy, article-oriented design, has been transformed to showcase the essence and atmosphere of Bottega, embracing the maritime theme inherent to a seafood dining experience.
+This project is a custom adaptation of the "Massively" template by HTML5 UP, tailored specifically for the La Bottega, an hypotetical italian distinguished seafood restaurant. The original template, known for its text-heavy, article-oriented design, has been transformed to showcase the essence and atmosphere of La Bottega, embracing the maritime theme inherent to a seafood dining experience.
 
 ## Live Demo
 
-Visit the live site here: [Bottega Restaurant](https://bottega-lgaratti.vercel.app/)
+Visit the live site here: [La Bottega Restaurant](https://bottega-lgaratti.vercel.app/)
 
 ## Features
 
