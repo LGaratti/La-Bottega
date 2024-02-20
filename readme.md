@@ -5,7 +5,7 @@ This project is a custom adaptation of the "Massively" template by HTML5 UP, tai
 
 ## Live Demo
 
-Visit the live site here: [La Bottega Restaurant](https://bottega-lgaratti.vercel.app/)
+Visit the live site here: [La Bottega Restaurant](labottega.vercel.app)
 
 ## Features
 
