@@ -1,4 +1,6 @@
-# Bottega Restaurant Website
+# La Bottega Restaurant Website
+
+![Main Menu Preview](https://github.com/LGaratti/Bottega/blob/main/assets/images/mainmenu.png)
 
 This project is a custom adaptation of the "Massively" template by HTML5 UP, tailored specifically for the La Bottega, an hypotetical italian distinguished seafood restaurant. The original template, known for its text-heavy, article-oriented design, has been transformed to showcase the essence and atmosphere of La Bottega, embracing the maritime theme inherent to a seafood dining experience.
 
